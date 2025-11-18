@@ -16,7 +16,8 @@ Proxmox 기반 서버에 여러 가상머신(VM)을 구성하여 개인 홈서�
 ## 아키텍처
 ![Infra](infra.png)
 ## 프로젝트 구성
-### 1. 모니터링 화면
+### 1. 대시보드 화면 (Last 24 hours)
+![DashBoard](dashboard.png)
 
 ### 2. 내용
   - **접속 환경 설정**
