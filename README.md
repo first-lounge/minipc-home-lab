@@ -11,10 +11,11 @@
 ## 아키텍처
 ![Infra](infra.png)
 ## 프로젝트 구성
-### 1. 대시보드 화면 (Last 24 hours)
+### 1. 방화벽 모니터링
+- #### 대시보드 화면 (Last 24 hours)
 ![DashBoard](dashboard.png)
 
-### 2. 내용
+- #### 내용
   - **접속 환경**
     - WireGuard VPN을 통해서만 내부망 접근이 가능하도록 설정하였습니다.
     - Proxmox GUI와 OPNsense GUI 또한 내부망으로 포함시켜 외부에서는 접근하지 못하도록 설정하였습니다.
