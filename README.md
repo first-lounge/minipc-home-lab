@@ -12,7 +12,7 @@
 ![Infra](infra.png)
 ## 프로젝트 구성
 <details>
-<summary><h3>1. VM 로그 모니터링</h3></summary>
+<summary><h3>1. VM 모니터링</h3></summary>
 
 - #### 대시보드 화면
 ![DashBoard](dashboard.png)
