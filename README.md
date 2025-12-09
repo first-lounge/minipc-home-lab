@@ -29,8 +29,8 @@
       - CloudFlared를 사용하여 VPN없이 도메인으로도 접속 가능하도록 설정하였습니다.
     
   - **metric 및 로그 수집**
-    - PVE_exporter로 Proxmox에 생성된 모든 VM들의 지표 수집하도록 설정하였습니다.
-    - 각 VM에는 Node Exorter, Fluent-Bit, Auditd를 설치하여 리소스 지표, 리눅스 시스템 보안과 일반 로그를 수집하도록 설정하였습니다.
+    - PVE_Exporter로 Proxmox에 생성된 모든 VM들의 지표 수집하도록 설정하였습니다.
+    - 각 VM에는 Node Exporter, Fluent-Bit, Auditd를 설치하여 리소스 지표, 리눅스 시스템 보안과 일반 로그를 수집하도록 설정하였습니다.
     - 수집한 모든 정보들을 Prometheus로 전송하고, Grafana를 이용해 CPU 사용량, Uptime, Network I/O 등을 보여주는 대시보드를 생성하였습니다.
   
   - **대시보드별 설명**
