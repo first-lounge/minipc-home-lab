@@ -1,11 +1,11 @@
 # 미니PC 홈서버 및 모니터링 구축
 
 ## 프로젝트 소개
-인프라에 대한 실습 경험을 쌓기 위해 개인 홈서버와 모니터링 환경을 구축하였습니다.
+미니PC 기반 홈서버 구축 및 모니터링 대시보드를 생성하였습니다.
 
 ## 프로젝트 구성
 - **Host OS**: Proxmox VE  
-- **VM 구성**: OPNsense (Firewall), 모니터링 VM (Grafana + Loki), 방화벽 로그 파싱 VM (Fluent Bit)  
+- **VM 구성**: 방화벽 VM (OPNsense + PVE Exporter), 모니터링 VM (Grafana + Loki + Prometheus), 로그 수집 및 파싱 VM (Fluent Bit + Node Exporter + Auditd), 
 - **네트워크**: 내부망 + VPN 접속만 허용  
 
 ## 아키텍처
@@ -28,13 +28,13 @@
       - CloudFlared를 사용하여 VPN없이 도메인으로도 접속 가능하도록 설정하였습니다.
     
   - **metric 및 로그 수집**
-    - Prometheus_pve_exporter로 Proxmox에 생성된 모든 VM들의 metric을 수집하도록 설정하였습니다.
+    - Prometheus_pve_exporter로 Proxmox에 생성된 모든 VM들의 지표 수집하도록 설정하였습니다.
     - 각 VM에는 node_exorter, fluent-bit, auditd를 설치하여 metric, 리눅스 시스템 보안과 일반 로그를 수집하도록 설정하였습니다.
     - 수집한 모든 정보들을 Prometheus로 전송하고, Grafana를 이용해 CPU 사용량, Uptime, Network I/O 등을 보여주는 대시보드를 생성하였습니다.
   
   - **대시보드별 설명**
     - 전체 VM 대시보드 : VM들의 metric 정보, 부팅 유무, 서버 이상 유무 등을 나타나도록 시각화하였습니다. 또한, 특정 VM의 이름을 클릭하면 해당 VM의 상세 정보를 보여주는 대시보드로 연결하였습니다.
-    - 특정 VM 대시보드 : CPU, Disk, RAM 사용량과 설정한 규칙에 해당하는 시스템 로그 발생 시 어떤 이벤트인지 나타나도록 구성하였습니다.
+    - 특정 VM 대시보드 : VM 리소스(CPU/RAM/Storage) 지표와 설정한 규칙에 해당하는 시스템 로그 발생 시 어떤 이벤트인지 나타나도록 구성하였습니다.
 
 </details>
 
