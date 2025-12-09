@@ -27,14 +27,14 @@
   - **접속 환경**
       - CloudFlared를 사용하여 VPN없이 도메인으로도 접속 가능하도록 설정하였습니다.
     
-    - **metric 및 로그 수집**
-      - Prometheus_pve_exporter로 Proxmox에 생성된 모든 VM들의 metric을 수집하도록 설정하였습니다.
-      - 각 VM에는 node_exorter, fluent-bit, auditd를 설치하여 metric, 리눅스 시스템 보안과 일반 로그를 수집하도록 설정하였습니다.
-      - 수집한 모든 정보들을 Prometheus로 전송하고, Grafana를 이용해 CPU 사용량, Uptime, Network I/O 등을 보여주는 대시보드를 생성하였습니다.
-    
-    - **대시보드별 설명**
-      - 전체 VM 대시보드 : VM들의 metric 정보, 부팅 유무, 서버 이상 유무 등을 나타나도록 시각화하였습니다. 또한, 특정 VM의 이름을 클릭하면 해당 VM의 상세 정보를 보여주는 대시보드로 연결하였습니다.
-      - 특정 VM 대시보드 : auditd를 통해 시스템 로그, 내부 
+  - **metric 및 로그 수집**
+    - Prometheus_pve_exporter로 Proxmox에 생성된 모든 VM들의 metric을 수집하도록 설정하였습니다.
+    - 각 VM에는 node_exorter, fluent-bit, auditd를 설치하여 metric, 리눅스 시스템 보안과 일반 로그를 수집하도록 설정하였습니다.
+    - 수집한 모든 정보들을 Prometheus로 전송하고, Grafana를 이용해 CPU 사용량, Uptime, Network I/O 등을 보여주는 대시보드를 생성하였습니다.
+  
+  - **대시보드별 설명**
+    - 전체 VM 대시보드 : VM들의 metric 정보, 부팅 유무, 서버 이상 유무 등을 나타나도록 시각화하였습니다. 또한, 특정 VM의 이름을 클릭하면 해당 VM의 상세 정보를 보여주는 대시보드로 연결하였습니다.
+    - 특정 VM 대시보드 : CPU, Disk, RAM 사용량과 설정한 규칙에 해당하는 시스템 로그 발생 시 어떤 이벤트인지 나타나도록 구성하였습니다.
 
 </details>
 
