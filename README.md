@@ -43,7 +43,7 @@
 <summary><h3>2. 방화벽 모니터링</h3></summary>
 
 - #### 대시보드 화면
-![DashBoard](dashboard.png)
+  ![DashBoard](dashboard.png)
 
 - #### 내용
   - **접속 환경**
