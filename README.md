@@ -15,7 +15,12 @@
 <summary><h3>1. VM 모니터링</h3></summary>
 
 - #### 대시보드 화면
-![DashBoard](dashboard.png)
+  - 전체 VM 상태
+    ![Total](01_total.png)
+    ![Total](02_total.png)
+  - 각 VM 상태
+    ![VMS](01_vms.png)
+    ![VMS](02_vms.png)
 
 - #### 내용
   - **접속 환경**
