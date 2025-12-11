@@ -7,7 +7,7 @@
 - **Host OS**: Proxmox VE  
 - **VM 구성**: 방화벽 VM (OPNsense + PVE Exporter), 모니터링 VM (Grafana + Loki + Prometheus), 로그 수집 및 파싱 VM (Fluent Bit + Node Exporter + Auditd), 
 - **네트워크**: 내부망 + VPN 접속만 허용  
-- **알림**: AlertManager
+- **알림**: AlertManager (서버 다운 시 이메일로 알림 설정)
 
 ## 아키텍처
 ![Infra](infra.png)
